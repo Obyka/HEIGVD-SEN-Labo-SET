@@ -128,7 +128,7 @@ Comme nous le voyons, cette dernière vient du Brésil, ce qui finit par confirm
 
 ### Lien 1
 
-On passant la souris sur le lien on peut voir sa destination en bas à droite du navigateur, on voit que celui-ci amène sur le site de google.com:
+En passant la souris sur le lien on peut voir sa destination en bas à droite du navigateur, on voit que celui-ci amène sur le site de google.com:
 
 ![](img/SEN_Labo02_Image08.png)
 
@@ -140,7 +140,7 @@ L'explication vient du code HTML, l'attribut href de destination est `http://www
 
 ### Lien 2
 
-Ce lien utilise une astuce profitant de l'encodage des caractères HTML (voir: https://www.commentcamarche.net/contents/489-caracteres-speciaux-html), en effet le fait d'écrire `&shy` en HTML ne va rien afficher dans le code HTML, par contre dans l'attribut href du code HTML, celui-ci sera interpréter comme tel et donc le lien du site mènera vers `http://www.wells&shyfargo.com`:
+Ce lien utilise une astuce profitant de l'encodage des caractères HTML (voir: https://www.commentcamarche.net/contents/489-caracteres-speciaux-html), en effet le fait d'écrire `&shy` en HTML ne va rien afficher dans le code HTML, par contre dans l'attribut href du code HTML, celui-ci sera interprété comme tel et donc le lien du site mènera vers `http://www.wells&shyfargo.com`:
 
 ```html
 <a href="http://www.wells&shyfargo.com">http://www.wells&shyfargo.com</a>
@@ -148,7 +148,7 @@ Ce lien utilise une astuce profitant de l'encodage des caractères HTML (voir: h
 
 ### Lien 3
 
-Le lien 3 affiche simplement un text à la place du lien complet, comme pour le premier lien, on peut voir la destination de ce lien en bas à droit en passant la souris sur le lien, ou en regardant le code HTML de la page directement:
+Le lien 3 affiche simplement un texte à la place du lien complet, comme pour le premier lien, on peut voir la destination de ce lien en bas à droit en passant la souris sur le lien, ou en regardant le code HTML de la page directement:
 
 ![](img/SEN_Labo02_Image09.png)
 
@@ -160,13 +160,13 @@ Cet URL utilise deux techniques afin de se camoufler, la 1ère c'est l'encodage 
 
 Si on traduit le tout on obtient le lien: `http://www.wellsfargo.com:login@www.google.com/`.
 
-Puis la deuxième astuce consiste à utiliser une vieille méthode de login en HTTP, qui consiste à passer les credentials directement dans l'URL (voir: https://serverfault.com/questions/371907/can-you-pass-user-pass-for-http-basic-authentication-in-url-parameters), dans ce cas là le username serait `www.wellsfargo.com` et le mot de passe serait `login`.
+Puis la deuxième astuce consiste à utiliser une vieille méthode de login en HTTP, qui consiste à passer les credentials directement dans l'URL (voir: https://serverfault.com/questions/371907/can-you-pass-user-pass-for-http-basic-authentication-in-url-parameters), dans ce cas-là le username serait `www.wellsfargo.com` et le mot de passe serait `login`.
 
-Donc au final le fait de cliquer sur cette URL va nous amener vers google.com.
+Pour conclure, le fait de cliquer sur cette URL va nous amener vers google.com.
 
 ### Lien 5
 
-Cet URL combine une technique déjà connu, vu dans le lien 3, qui affiche un texte au lieu de l'URL, mais elle combine aussi une nouvelle technique qui consiste à utiliser un service qui va raccourcir les liens, afin qu'il soit plus facile à lire et à transmettre (voir: https://bitly.com/).
+Cet URL combine une technique déjà connue, vu dans le lien 3, qui affiche un texte au lieu de l'URL, mais elle combine aussi une nouvelle technique qui consiste à utiliser un service qui va raccourcir les liens, afin qu'il soit plus facile à lire et à transmettre (voir: https://bitly.com/).
 
 Donc en cliquant sur le lien on va être rediriger depuis la page `Bitly`, vers la vrai page du lien, et donc pour pallier à cela, on peut utiliser des services qui vont aller visiter le lien à notre place et nous dire où il mène vraiment comme ce site par exemple: http://checkshorturl.com/expand.php.
 
@@ -200,7 +200,7 @@ En l'occurrence ce script va simplement nous rediriger directement vers `http:/w
 
 Ce lien utilise la ressemblance des caractères latin (notre alphabet courant) avec des caractères de l'alphabet cyrilliques, afin de tromper la vigilance de l'utilisateur.
 
-Par exemple dans l'URL `http://&#1075;&#1072;&#1091;th&#1077;&#1086;n.&#1089;&#1086;m`, le caractère `&#1075` est un caractère qui ressemble a la lettre `r` de notre alphabet, mais c'est en réalité de le caractère `г` de l'alphabet cyrillique:
+Par exemple dans l'URL `http://&#1075;&#1072;&#1091;th&#1077;&#1086;n.&#1089;&#1086;m`, le caractère `&#1075` est un caractère qui ressemble à la lettre `r` de notre alphabet, mais c'est en réalité de le caractère `г` de l'alphabet cyrillique:
 
 ![](img/SEN_Labo02_Image016.png)
 
